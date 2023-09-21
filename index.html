@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation Bar | CodingNepal</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn" style="align-items: center;">
+        <span style="margin-right: 5px;">Menu</span><i class="fas fa-bars"></i>
+       
+      </div>
+      
+
+      
+
+        
+          <div class="iconside sidebar-btn" style="align-items: center;">
+            <span style="margin-left: 5px;">Sidebar</span><box-icon name='menu-alt-right' color='#ffffff'></box-icon>
+    
+    
+            
+          </div>
+      
+     
+      
+
+
+  
+  <h1 class="test-header"> Main Content      
+
+    
+    </h1>
+  <p class="test-headers">My country’s name is Bangladesh. Bangladesh is a very small country huge population. It is a medium-developed country in South Asia. We have a very good and progressing economy. It has an area of 147,570 square kilometers. But it has a population of 164 million. That is huge than the area.
+
+    But it is still a very beautiful and peaceful country. People of Bangladesh are so friendly with each other. This country has a glorious history of independence. We got independence from Pakistan in 1971 after nine mothers’ blood-shedding war. More than 3 million Bangladeshi sacrificed their life in that genocide.
+   . </p>
+    </div>
+  </nav>
+
+  <nav class="sidebar" style="margin-top: 75px;">
+    <div class="text sidebar-btn" style="color:  rgba(0, 0, 0, 1);;">
+       Sidebar
+    </div>
+ <div class="wrapper">      
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head">  
+            <label for="collapsible-head">Item 1<box-icon name='chevron-down' style="float: right;"></box-icon></label>
+            <div class="collapsible-text">
+                <p>Item A</p>
+                <p>Item B</p>
+            </div>
+        </div>
+    </div>
+  
+<br>
+    <div class="wrapper">
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head">  
+            <label for="collapsible-head">Item 2<box-icon name='chevron-down' style="float: right;"></box-icon></label>
+            <div class="collapsible-text">
+                <p>Item c</p>
+                <p>Item d</p>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="wrapper">
+        <div class="collapsible">
+            <input type="checkbox" id="collapsible-head">  
+            <label for="collapsible-head">Item 3<box-icon name='chevron-down' style="float: right;"></box-icon></label>
+            <div class="collapsible-text">
+                <p>Item f</p>
+                <p>Item f</p>
+            </div>
+        </div>
+    </div>
+
+      
+ </nav>
+ <!-- sifr -->
+ 
+
+   <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    // window.onscroll = ()=>{
+    //   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    // }
+
+
+
+
+    const sidebar = document.querySelector(".sidebar");
+    const sidebarBtn = document.querySelector(".sidebar-btn");
+
+    // Function to toggle the sidebar
+    function toggleSidebar() {
+      sidebar.classList.toggle("show");
+    }
+
+    // Add click event listener to the button
+    sidebarBtn.addEventListener("click", toggleSidebar);
+  </script>
+
+  </script>
+
+</body>
+</html>
